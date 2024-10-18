@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.0)
+cmake_minimum_required (VERSION 3.16)
 
 project (qtcsv VERSION 1.7.0 LANGUAGES CXX)
 
@@ -14,7 +14,7 @@ set(QT_CORE_TARGET Qt6::Core)
 set(CMAKE_AUTOMOC ON)
 
 # set list of source files
-file(GLOB_RECURSE SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/sources/*.cpp)
+file(GLOB_RECURSE SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/sources/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/sources/*.h ${CMAKE_CURRENT_SOURCE_DIR}/include/qtcsv/*.h)
 
 # Show all files in QtCreator. Starting with CMake 3.7 server-mode is used
 # and QtCreator will show the files properly in an extra <Headers> section.
